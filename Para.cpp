@@ -10,6 +10,7 @@ Para::Para(char* para[])
     POP_SIZE = stoi(para[1]);
     ELITE = stoi(para[2]);
     MUTATE_PROB = stod(para[3]);     
+    TOURNAMENT_SIZE = stoi(para[4]);
 }
 
 Para::~Para()

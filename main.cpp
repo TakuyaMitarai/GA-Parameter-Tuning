@@ -24,7 +24,8 @@ int main(int argc, char* argv[])
 	}
 	end = clock();
 	comptime = (float)(end-start) / CLOCKS_PER_SEC;
-	printf("%d %d %f %f %f\n", para->POP_SIZE, para->ELITE, para->MUTATE_PROB, best_fit, comptime);
+	// printf("%d %d %f %f %f\n", para->POP_SIZE, para->ELITE, para->MUTATE_PROB, best_fit, comptime);
+	printf("%d %d %f %d %f %f\n", para->POP_SIZE, para->ELITE,  para->MUTATE_PROB, para->TOURNAMENT_SIZE, best_fit, comptime);
 	delete pop;
 	delete para;
 

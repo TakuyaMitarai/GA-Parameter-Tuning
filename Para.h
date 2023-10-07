@@ -9,5 +9,5 @@ public:
     int POP_SIZE;            // 個体群のサイズ
     int ELITE;	            // エリート保存戦略で残す個体の数
     double MUTATE_PROB;      // 突然変異確率
-    //int TOURNAMENT_SIZE	// トーナメントサイズ
+    int TOURNAMENT_SIZE;	// トーナメントサイズ
 };

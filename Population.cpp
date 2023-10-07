@@ -100,8 +100,8 @@ void Population::alternate()
 	// 親を選択し交叉する
 	for(; i < para->POP_SIZE; i++) {
 		// 順位に基づくランキング選択
-		p1 = rankingSelect1();
-		p2 = rankingSelect1();
+		// p1 = rankingSelect1();
+		// p2 = rankingSelect1();
 		/*
 		// 確率に基づくランキング選択
 		p1 = rankingSelect2();
@@ -109,10 +109,10 @@ void Population::alternate()
 		// ルーレット選択
 		p1 = rouletteSelect();
 		p2 = rouletteSelect();
+		*/
 		// トーナメント選択
 		p1 = tournamentSelect();
 		p2 = tournamentSelect();
-		*/
 
 		// 一点交叉
 		nextInd[i]->crossover1(ind[p1], ind[p2]);
@@ -214,7 +214,7 @@ int Population::tournamentSelect()
 				ret = r;
 				bestFit = ind[r]->fitness;
 			}
-			if(++num == TOURNAMENT_SIZE) {
+			if(++num == para->TOURNAMENT_SIZE) {
 				break;
 			}
 		}
