@@ -198,16 +198,16 @@ int Population::tournamentSelect()
 {
 	int i, ret, num, r;
 	double bestFit;
-	int tmp[N];
+	vector<int> tmp;
 
-	for(i = 0; i < N; i++) {
-		tmp[i] = 0;
+	for(i = 0; i < para->POP_SIZE; i++) {
+		tmp.push_back(0);
 	}
 	ret = -1;
 	bestFit = DBL_MAX;
 	num = 0;
 	while(1) {
-		r = rand() % N;
+		r = rand() % para->POP_SIZE;
 		if(tmp[r] == 0) {
 			tmp[r] = 1;
 			if(ind[r]->fitness < bestFit) {

@@ -9,8 +9,8 @@
 using namespace std;
 
 // 定数の定義
-#define GEN_MAX			2000	// 世代交代数
-#define N				64		// 集合の要素となる最大数の平方値
+#define GEN_MAX			200	// 世代交代数
+#define N				1000		// 集合の要素となる最大数の平方値
 
 // 0以上1以下の実数乱数
 #define RAND_01 ((double)rand() / RAND_MAX)
